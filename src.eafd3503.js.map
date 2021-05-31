@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["CountdownTimer","selector","targetDate","Date"],"mappings":";;;AAGA,aAHA,QAAA,oBAGA,IAAIA,eAAe,CACfC,SAAU,WACVC,WAAY,IAAIC,KAAK","file":"src.eafd3503.js","sourceRoot":"../src","sourcesContent":["import './sass/main.scss';\n\n\nnew CountdownTimer({\n    selector: '#timer-1',\n    targetDate: new Date('Jul 17, 2019'),\n  });"]}
