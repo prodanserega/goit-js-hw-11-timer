@@ -7,16 +7,15 @@ class Timer {
   }
 
   start() {
+    this.setDate();
+    this.timer = setInterval(() => this.setDate(), 1000);
+  }
+  setDate = () => {
     const currentTime = Date.now();
     const time = this.targetDate - currentTime;
     const { days, hours, mins, secs } = this.getTimeComponents(time);
     this.updateTimeFields({ days, hours, mins, secs });
-    setInterval(() => {
-      const currentTime = Date.now();
-      const time = this.targetDate - currentTime;
-      const { days, hours, mins, secs } = this.getTimeComponents(time);
-      this.updateTimeFields({ days, hours, mins, secs });}, 1000);
-  }
+  };
 
   getFieldsBySelector(selector) {
     const refs = {
